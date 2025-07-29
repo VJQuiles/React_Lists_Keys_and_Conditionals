@@ -1,3 +1,7 @@
+# Under Construction
+
+I am still working on this, i know what i have to do, just have to do it. This is what i have for now. 
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
