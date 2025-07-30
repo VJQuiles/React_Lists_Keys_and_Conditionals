@@ -3,6 +3,7 @@ import type { TaskListProps, TaskStatus } from "../../types"
 import { TaskItem } from "../TaskItem/TaskItem"
 import { TaskFilter } from "../TaskFilter/TaskFilter"
 
+//This component is made to house both TaskItem and TaskFilter. State was used to enable the ability to set the initial filter status, and then handleChange was made to actually do something with filter change. .map was used to assign tasks in the list from the task array.  in
 
 export const TaskList: React.FC<TaskListProps> = ({
     tasks,
@@ -12,10 +13,12 @@ export const TaskList: React.FC<TaskListProps> = ({
 
     const [filter, setFilter] = useState<{
         status?: TaskStatus
+
     }>({})
 
     const handleFilter = (newFilter: {
         status?: TaskStatus
+        priority?: 'low' | 'medium' | 'high'
     }) => {
         setFilter(newFilter)
     }

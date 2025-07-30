@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import type { TaskStatus } from './types'
 import { TaskList } from './components/TaskList/TaskList'
+import type { Task } from './types'
 
 function App() {
   const [tasks, setTasks] = useState<Task[]>([
@@ -10,6 +11,7 @@ function App() {
       title: "this needs to get done",
       description: "description of what needs to be done",
       status: "pending",
+      priority: 'low',
       dueDate: "1/2/2025"
     },
     {
@@ -17,6 +19,7 @@ function App() {
       title: "this also needs to get done",
       description: "description of what also needs to be done",
       status: "in-progress",
+      priority: 'medium',
       dueDate: "1/3/2025"
     },
     {
@@ -24,6 +27,7 @@ function App() {
       title: "this too needs to get done",
       description: "description of what needs to be done too",
       status: "completed",
+      priority: 'high',
       dueDate: "1/2/2025"
     }
   ])
